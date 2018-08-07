@@ -1,5 +1,5 @@
 body {
-    background-color: aquamarine;
+    background-color: #97f9f9;
     font-family: 'Courgette', cursive;
     color: black;
     letter-spacing: 2px;
@@ -11,7 +11,7 @@ h1 {
 }
 
 #splashscreen {
-    background-color: aquamarine;
+    background-color: #a4def9;
     background-repeat: no-repeat;
     width: 35%;
     margin: 0 auto;
@@ -51,12 +51,12 @@ label {
 
 #answerScreen {
     display: none;
-    background-color: aquamarine;
+    background-color: #c1e0f7;
     background-repeat: no-repeat;
     width: 40%;
     margin: 0 auto;
     padding: 2%;
-    margin-top: 15%;
+    margin-top: 5%;
     font-size: 21px;
 }
 
@@ -67,7 +67,7 @@ label {
     width: 35%;
     margin: 0 auto;
     padding: 2%;
-    margin-top: 15%;
+    margin-top: 5%;
     font-size: 21px;
 }
 
@@ -85,7 +85,7 @@ label {
 }
 
 body .container {
-    background-color: aquamarine;
+    background-color: #cfbae1;
     height: 100%;
     text-align: center;
     display: none;
@@ -123,20 +123,20 @@ header {
 }
 
 .answer:hover {
-    background-color: yellow;
+    background-color: #c59fc9;
     border: #000000;
     border-style: solid;
-
+    cursor: pointer;
 }
 
 #intermissionScreen {
     display: none;
-    background-color: aquamarine;
+    background-color: #a4def9;
     background-repeat: no-repeat;
     width: 40%;
     margin: 0 auto;
     padding: 2%;
-    margin-top: 15%;
+    margin-top: 5%;
     font-size: 21px;
 }
 
