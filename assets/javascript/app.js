@@ -108,7 +108,6 @@ var questionDisplay = function (j) {
     // build answers here
     $('.questions').prepend('<div class="' + questions[j].name + '"></div>');
     $(questions[j].divClass).append('<div class ="ques-title">' + questions[j].ques + '</div>');
-    // loops through answers for each radio button
     for (var i = 0; i < 4; i++) {
         var answers = $("<div>");
         answers.addClass("answer");
@@ -157,16 +156,9 @@ var intermission = function () {
     $(".correctScreen").html("Correct Answers: " + correct);
     $(".wrongScreen").html("Wrong Answers: " + incorrect);
     $(".ngScreen").html("Not Guessed: " + notguessed);
-
-    // $("#correctGuess").html("The correct Guess is: " + questions[j].correct);
     $('#intermissionScreen').show();
-
-    // stay for 5 seconds then move to questionDisplay
     $("#giffyHere").text('');
-    // var queryURL = "https://api.giphy.com/v1/gifs/random?tag=" + questions[j].giffy + "&rating=pg&api_key=dc6zaTOxFJmzC&limit=1";
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + questions[j].giffy + "&rating=pg&api_key=dc6zaTOxFJmzC&limit=10";
-    console.log("question1 ", j);
-    console.log(queryURL);
 
     // Give a random gif based on search criteria
     var gifnum = Math.floor(Math.random() * 10);
@@ -176,14 +168,9 @@ var intermission = function () {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log("question2 ", j);
-        console.log("RESPONSE", response);
-        console.log("RESPONSE2", response.data[gifnum].embed_url);
         var imageGif = $("<iframe>");
         imageGif.attr("src", response.data[gifnum].embed_url);
-        // imageGif.attr("alt", questions[j].giffy);
         $("#giffyHere").html(imageGif);
-        //    $("#giffyHere").html("<img src=\"" + response.embed_url + "\"></img>");
     });
 
     j++;
@@ -202,7 +189,6 @@ var intermission = function () {
 var finale = function () {
     $('#intermissionScreen').hide();
     $('#answerScreen').show();
-    // $('.container').hide();
     if (correct > 9) {
         var congrats = 'PERFECT!!!';
     } else if (correct > 7) {
@@ -218,7 +204,6 @@ var finale = function () {
     $(".correctScreen").html("Correct Answers: " + correct);
     $(".wrongScreen").html("Wrong Answers: " + incorrect);
     $(".ngScreen").html("Not Guessed: " + notguessed);
-
 }
 
 
